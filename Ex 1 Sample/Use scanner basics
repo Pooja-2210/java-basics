@@ -1,0 +1,82 @@
+package exercises;
+
+import java.util.Scanner;
+
+public class practice {
+	public static void main(String[] args) {
+		int a;
+		Scanner scanner  = new Scanner(System.in);
+		System.out.println("Enter the value:");
+		a=scanner.nextInt();
+		System.out.println("a="+a);
+		String b;
+		System.out.println("Enter the name:");
+		b=scanner.next();
+		System.out.println("Name is:"+b);
+		Float c;
+		System.out.println("Enter the salary:");
+		c=scanner.nextFloat();
+		System.out.println("salary is:"+c);
+		boolean d;
+		System.out.println("are you above 18?:" );
+		d=scanner.nextBoolean();
+		if(d) {
+			System.out.println(" you are eligible to vote:");
+		}
+		else {
+			System.out.println("you are not eligible to vote:");
+		}
+		double e;
+		System.out.println("Enter the cgpa");
+		e =scanner.nextDouble();
+		System.out.println("cgpa is:"+e);
+		
+		String f;
+		String rev="";
+		System.out.println("Enter a string:");
+		f=scanner.next();
+		System.out.println("Original String:"+f);
+		for(int i=f.length()-1;i>=0;i--) {
+			rev=rev+f.charAt(i);
+			
+		}
+		System.out.println("Reversed String:"+rev);
+		if(f.equals(rev)) {
+			System.out.println("Its a palindrome");	
+		}else {
+			System.out.println("Its not a palindrome");
+		}
+		System.out.println("Enter a limit:");
+		int n=scanner.nextInt();
+		System.out.println("Numbers from 1 to 10:");
+		for (int i=1; i<=n; i++) {
+            System.out.println(i);
+        }
+		System.out.println("Enter a even Number:");
+		for ( int i=1; i<=n; i++) {
+			if(i%2==0) {
+				System.out.println(i+"");
+			}
+            
+        }
+		System.out.println("Enter a odd Number:");
+		for (int i = 1; i<=n; i++) {
+			if(i%2!=0) {
+				System.out.println(i+"");
+			}
+            
+        }
+		System.out.println("Sum of "+n+" numbers:");
+		int sum=0;
+		for(int i=1;i<=n;i++) {
+		sum=sum+i;
+		}
+		System.out.println(sum);
+		StringBuilder str=new StringBuilder("hii");
+		System.out.println(str.reverse());
+	
+
+		
+	}
+
+}
