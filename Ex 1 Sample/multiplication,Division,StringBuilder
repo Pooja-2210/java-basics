@@ -1,0 +1,57 @@
+package exercises;
+
+import java.util.Scanner;
+
+public class Test {
+	public static void main(String[] args) {
+	
+	int number = 10;
+
+	if (number > 0) {
+	    System.out.println("Positive number");
+	}
+	int num=6;
+	if(number % 2==0) {
+		System.out.println(num + "is Even");
+	}  
+	int number1=9;
+	if(number1 % 2!=0){
+	   System.out.println(number1+ "is odd");
+	}
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Which multiplication table  want to print?");
+		int n= scanner.nextInt();
+		for(int i=1; i<=10; i++) {
+			int sum = i*n;
+			System.out.println(i+ " x " +n+ " = " +sum);
+			
+		}
+		System.out.println("Enter a Value");
+		Scanner scanner1=new Scanner(System.in);
+		int n1=scanner.nextInt();
+		System.out.println(" value  n is divisible by:");
+		for(int i=1;i<=n;i++) {
+			if(n%i==0) {
+				System.out.println(i);
+				
+			}
+			
+		}
+		Scanner scanner2=new Scanner(System.in);
+		int n2=scanner.nextInt();
+		StringBuilder sb =new StringBuilder();
+		if(n==0) {
+			sb.append(0);
+		}
+	    while(n>0) {
+	     	int a=n%2;
+	     	sb.append(a);
+	    	n=n/2;
+	    }
+	        sb.reverse();
+	    System.out.println(sb);
+	    scanner.close();
+		
+		}
+}
+	
