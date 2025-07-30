@@ -1,0 +1,74 @@
+package exercises;
+
+public class Strings {
+	
+		public static void main(String[] args) {
+			String a="java";
+			String b="programming";
+			String k="java";
+			String x=new String("java");
+			System.out.println(x.hashCode()); 
+			System.out.println(a.hashCode());
+			System.out.println(k.hashCode());
+			System.out.println(a.equals(x));
+			System.out.println(a == x);
+			System.out.println("Concatenation:"+(a+b));
+			System.out.println("Lenghth of a:"+a.length());
+		    System.out.println("Char position:"+b.charAt(3));
+			System.out.println("Substring of a:"+a.substring(2));
+			System.out.println("Substring of b:"+b.substring(0,7));
+			System.out.println("Uppercase:"+a.toUpperCase());
+			System.out.println("Lowercase:"+b.toLowerCase());
+			System.out.println(b. contains("programming"));
+			String c="";
+			String d="  ";
+		    System.out.println(c.isEmpty()); 
+	        System.out.println(d.isBlank()); 
+	        String e="  Hello java  ";
+	        System.out.println("Before: '" +e+ "'");
+	        System.out.println("After: '" +e.trim() + "'");
+	        String original = "python is hard";
+	        String updated = original.replace("hard", "easy");
+	        System.out.println(updated); 
+	        int result = a.compareTo(b);
+	        System.out.println("Compare result: " + result); 
+	        String f = "lion,zebra,giraffe";
+	        String[] animals = f.split(",");
+
+	        for (String animal : animals) {
+	            System.out.println(animal);
+		}
+	        int num = 22;
+	        String str = String.valueOf(num);
+	        System.out.println("String value: " + str );
+
+	        String s = "27";
+	        int n = Integer.parseInt(s);
+	        System.out.println("Integer value: " + n);
+	        String g = "moderate";
+	        int count = 0;
+
+	        for (char ch : g.toLowerCase().toCharArray()) {
+	            if ("aeiou".indexOf(ch) != -1) {
+	                count++;
+	            }
+	        }
+
+	        System.out.println("Vowel count: " + count);
+	        String h = "welcome";
+	        String reversed = "";
+
+	        for (int i = h.length() - 1; i >= 0; i--) {
+	            reversed += h.charAt(i);
+	        }
+
+	        System.out.println("Reversed: " + reversed);
+	        String name = "Kiruthika";
+	        int age = 20;
+
+	        String formatted = String.format("Name: %s, Age: %d", name, age);
+	        System.out.println(formatted);
+	    }
+    }
+ 
+
