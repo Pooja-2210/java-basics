@@ -1,0 +1,42 @@
+package exercises;
+
+public class Demo {
+	public static void main (String[] args) {
+        for(int i=1;i<=10;i++) {
+        	 System.out.println("Original number:"+i);
+        	  if (isPalindrome(i)) {
+        		  System.out.println("it's a palindrome:");
+        	  } else {
+        		  int reversed  =reversenumber(i);
+        		  int sum = i+reversed;
+        		  System.out.println("not a palindrome:");
+        		  System.out.println("Reversed:"+reversed);
+        		  System.out.println("sum(original+reversed):" + sum);
+        		  if(isPalindrome(sum)) {
+        			  System.out.println("The sum is a palindrome:");
+        		  } else {
+        			  System.out.println("The sum is not a palindrome:");
+        		  }
+        		  
+        		  
+        		  
+        	  }
+        }
+	}
+
+	public static int reversenumber(int i) {
+		int reversed=0;
+		while (i>0) {
+			int digit = i%10;
+			reversed=reversed*10+digit;
+			i/=10;	
+		}
+		return reversed;
+	}
+
+	public static boolean isPalindrome(int i) {
+		// TODO Auto-generated method stub
+		return i==reversenumber(i);
+	}
+
+}
